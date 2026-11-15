@@ -1,0 +1,25 @@
+{
+  "vendor": "scorer-c",
+  "pairs": [
+    {
+      "amount": 1000.0,
+      "stale_risk": 0.019608,
+      "fresh_risk": 0.001961,
+      "diverged": true
+    },
+    {
+      "amount": 50000.0,
+      "stale_risk": 0.5,
+      "fresh_risk": 0.05,
+      "diverged": true
+    },
+    {
+      "amount": 5000000.0,
+      "stale_risk": 0.990099,
+      "fresh_risk": 0.09901,
+      "diverged": true
+    }
+  ],
+  "context_keyed": true,
+  "evidence": "f80a5f52f9f24fb2"
+}

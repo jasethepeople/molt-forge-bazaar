@@ -1,0 +1,200 @@
+{
+  "kind": "molt-verify/1",
+  "forge": "node:forge@d5ad729b157049db",
+  "obligations": [
+    {
+      "id": "O1",
+      "kind": "edge-reachability",
+      "stage": "normalize",
+      "vendor": "normalizer-b",
+      "from": "pipeline.input",
+      "projection": [
+        "amount",
+        "kind",
+        "memo",
+        "raw_id",
+        "ts"
+      ],
+      "join": null,
+      "requirement_hash": "149dc2af2b8390ed",
+      "guarantee_hash": "a2ae5b833f5936fc",
+      "missing_required": [],
+      "counterexample": null,
+      "verdict": "pass"
+    },
+    {
+      "id": "O2",
+      "kind": "edge-reachability",
+      "stage": "score",
+      "vendor": "scorer-a",
+      "from": "normalize:normalizer-b",
+      "projection": [
+        "amount",
+        "event_id",
+        "kind",
+        "ts"
+      ],
+      "join": null,
+      "requirement_hash": "a5bca6f75f554a93",
+      "guarantee_hash": "a5bca6f75f554a93",
+      "missing_required": [],
+      "counterexample": null,
+      "verdict": "pass"
+    },
+    {
+      "id": "O3",
+      "kind": "edge-reachability",
+      "stage": "schedule",
+      "vendor": "scheduler-a",
+      "from": "score:scorer-a",
+      "projection": [
+        "amount",
+        "event_id",
+        "kind",
+        "risk",
+        "ts"
+      ],
+      "join": null,
+      "requirement_hash": "d7e10713f11723bd",
+      "guarantee_hash": "d7e10713f11723bd",
+      "missing_required": [],
+      "counterexample": null,
+      "verdict": "pass"
+    },
+    {
+      "id": "O4",
+      "kind": "edge-reachability",
+      "stage": "settle",
+      "vendor": "settler",
+      "from": "schedule:scheduler-a",
+      "projection": [
+        "amount",
+        "event_id",
+        "kind",
+        "risk",
+        "trigger_id",
+        "trigger_ts"
+      ],
+      "join": "scored x trigger(at->trigger_ts)",
+      "requirement_hash": "f39b4cb5c1fe8a8f",
+      "guarantee_hash": "899d2232a2ffa8ae",
+      "missing_required": [],
+      "counterexample": null,
+      "verdict": "pass"
+    },
+    {
+      "id": "O-final",
+      "kind": "output-reachability",
+      "stage": "pipeline",
+      "vendor": null,
+      "from": "settle:settler",
+      "projection": null,
+      "join": null,
+      "requirement_hash": "432e1194bf62454a",
+      "guarantee_hash": "69b53b3a809f7c36",
+      "missing_required": [],
+      "counterexample": null,
+      "verdict": "pass"
+    },
+    {
+      "id": "O-rej-1",
+      "kind": "rejection-channel",
+      "stage": "normalize",
+      "vendor": "normalizer-b",
+      "from": "normalize:normalizer-b.error",
+      "projection": null,
+      "join": null,
+      "requirement_hash": "abc85710141a9b73",
+      "guarantee_hash": "abc85710141a9b73",
+      "missing_required": [],
+      "counterexample": null,
+      "verdict": "pass"
+    },
+    {
+      "id": "O-rej-2",
+      "kind": "rejection-channel",
+      "stage": "score",
+      "vendor": "scorer-a",
+      "from": "score:scorer-a.error",
+      "projection": null,
+      "join": null,
+      "requirement_hash": "abc85710141a9b73",
+      "guarantee_hash": "abc85710141a9b73",
+      "missing_required": [],
+      "counterexample": null,
+      "verdict": "pass"
+    },
+    {
+      "id": "O-rej-3",
+      "kind": "rejection-channel",
+      "stage": "schedule",
+      "vendor": "scheduler-a",
+      "from": "schedule:scheduler-a.error",
+      "projection": null,
+      "join": null,
+      "requirement_hash": "abc85710141a9b73",
+      "guarantee_hash": "abc85710141a9b73",
+      "missing_required": [],
+      "counterexample": null,
+      "verdict": "pass"
+    },
+    {
+      "id": "O-rej-4",
+      "kind": "rejection-channel",
+      "stage": "settle",
+      "vendor": "settler",
+      "from": "settle:settler.error",
+      "projection": null,
+      "join": null,
+      "requirement_hash": "abc85710141a9b73",
+      "guarantee_hash": "abc85710141a9b73",
+      "missing_required": [],
+      "counterexample": null,
+      "verdict": "pass"
+    }
+  ],
+  "failed_obligations": [],
+  "sandbox": {
+    "inputs": 96,
+    "transfers": 29,
+    "rejected": 67,
+    "deadletter": 0,
+    "gas_used": 7123,
+    "violations": [],
+    "flush_triggers": 1
+  },
+  "monotonicity": {
+    "per_vendor": {
+      "normalize": {
+        "chain_errors": []
+      },
+      "score": {
+        "chain_errors": []
+      },
+      "schedule": {
+        "chain_errors": []
+      },
+      "settle": {
+        "chain_errors": []
+      }
+    },
+    "violations": [],
+    "ok": true
+  },
+  "causality": {
+    "checked": 183,
+    "violations": [],
+    "ok": true
+  },
+  "accounting": {
+    "inputs": 96,
+    "transfers": 29,
+    "rejected": 67,
+    "deadletter": 0,
+    "pending": 0,
+    "balanced": true
+  },
+  "verdict": "pass",
+  "note": "every intermediate event contract-valid, monotone, causally ordered; declared output reachable from declared input through every contract",
+  "sig": "bdc8b49f7c5c51e5149fca9cfae871b00d10f850e7b6563c07b4151ab2eef9bf96f7e1e2ca3058425fd9c5ea8d982a64a54c68e29848dea2a825dad0bd9c1602"
+}

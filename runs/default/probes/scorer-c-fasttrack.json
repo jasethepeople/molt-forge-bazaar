@@ -1,0 +1,149 @@
+{
+  "fast_track": {
+    "vendor": "scorer-c",
+    "capability": "risk-scorer",
+    "probes": [
+      {
+        "probe": "happy-0",
+        "payload_sha": "d262e5e27d003520",
+        "emit": {
+          "ok": true,
+          "data": {
+            "event_id": "ev-000000000000",
+            "kind": "claim",
+            "amount": 250.0,
+            "ts": 1700000000,
+            "risk": 0.004975,
+            "scorer": "scorer-c/v1"
+          }
+        },
+        "gas": 29,
+        "latency_ms": 6.34,
+        "contract_violations": []
+      },
+      {
+        "probe": "happy-1",
+        "payload_sha": "207d893dbbc0b7a3",
+        "emit": {
+          "ok": true,
+          "data": {
+            "event_id": "ev-000000000001",
+            "kind": "claim",
+            "amount": 900.5,
+            "ts": 1700000100,
+            "risk": 0.017691,
+            "scorer": "scorer-c/v1"
+          }
+        },
+        "gas": 29,
+        "latency_ms": 11.23,
+        "contract_violations": []
+      },
+      {
+        "probe": "happy-2",
+        "payload_sha": "b29fd380b7590837",
+        "emit": {
+          "ok": true,
+          "data": {
+            "event_id": "ev-000000000002",
+            "kind": "claim",
+            "amount": 10,
+            "ts": 1700000200,
+            "risk": 0.0002,
+            "scorer": "scorer-c/v1"
+          }
+        },
+        "gas": 29,
+        "latency_ms": 8.32,
+        "contract_violations": []
+      }
+    ],
+    "observed_schema": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "min": 10,
+          "max": 900.5
+        },
+        "event_id": {
+          "type": "string",
+          "minLength": 15,
+          "maxLength": 15,
+          "enum": [
+            "ev-000000000000",
+            "ev-000000000001",
+            "ev-000000000002"
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 5,
+          "enum": [
+            "claim"
+          ]
+        },
+        "risk": {
+          "type": "number",
+          "min": 0.0002,
+          "max": 0.017691
+        },
+        "scorer": {
+          "type": "string",
+          "minLength": 11,
+          "maxLength": 11,
+          "enum": [
+            "scorer-c/v1"
+          ]
+        },
+        "ts": {
+          "type": "integer",
+          "min": 1700000000,
+          "max": 1700000200,
+          "enum": [
+            1700000000,
+            1700000100,
+            1700000200
+          ]
+        }
+      },
+      "required": [
+        "amount",
+        "event_id",
+        "kind",
+        "risk",
+        "scorer",
+        "ts"
+      ],
+      "additionalProperties": false
+    },
+    "direct_violations": [],
+    "violation_records": [],
+    "schema_mismatch": [],
+    "verdict": "consistent",
+    "transcript_sha": "a14adc8033df9217"
+  },
+  "calibration": [
+    {
+      "amount": 1000.0,
+      "kind": "claim",
+      "risk": 0.019608
+    },
+    {
+      "amount": 50000.0,
+      "kind": "claim",
+      "risk": 0.5
+    },
+    {
+      "amount": 5000000.0,
+      "kind": "claim",
+      "risk": 0.990099
+    },
+    {
+      "amount": 500000000.0,
+      "kind": "claim",
+      "risk": 0.9999
+    }
+  ]
+}

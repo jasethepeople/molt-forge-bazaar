@@ -1,0 +1,122 @@
+{
+  "forge": "node:forge@d5ad729b157049db",
+  "ruleset_hash": "43a123a202a6e7ce",
+  "aborted": false,
+  "spent": 1179.0,
+  "treasury": 150,
+  "vendors": {
+    "normalizer-a": {
+      "stake": 0,
+      "credits": 0,
+      "slashed": false,
+      "live_calls": 0
+    },
+    "normalizer-b": {
+      "stake": 50,
+      "credits": 222.0,
+      "slashed": false,
+      "live_calls": 111
+    },
+    "scheduler-a": {
+      "stake": 0,
+      "credits": 14.0,
+      "slashed": true,
+      "live_calls": 14
+    },
+    "scheduler-b": {
+      "stake": 50,
+      "credits": 101.0,
+      "slashed": false,
+      "live_calls": 101
+    },
+    "scorer-a": {
+      "stake": 50,
+      "credits": 380.0,
+      "slashed": true,
+      "live_calls": 102
+    },
+    "scorer-b": {
+      "stake": 50,
+      "credits": 0,
+      "slashed": false,
+      "live_calls": 0
+    },
+    "scorer-c": {
+      "stake": 0,
+      "credits": 9.0,
+      "slashed": true,
+      "live_calls": 9
+    },
+    "settler": {
+      "stake": 0,
+      "credits": 114.0,
+      "slashed": true,
+      "live_calls": 38
+    },
+    "settler-b": {
+      "stake": 50,
+      "credits": 339.0,
+      "slashed": false,
+      "live_calls": 113
+    }
+  },
+  "pipeline": [
+    {
+      "stage": "normalize",
+      "vendor": "normalizer-b",
+      "contract_id": "ctr-0001",
+      "price": 2.0
+    },
+    {
+      "stage": "score",
+      "vendor": "scorer-a",
+      "contract_id": "ctr-0008",
+      "price": 4.0
+    },
+    {
+      "stage": "schedule",
+      "vendor": "scheduler-b",
+      "contract_id": "ctr-0003",
+      "price": 1.0
+    },
+    {
+      "stage": "settle",
+      "vendor": "settler-b",
+      "contract_id": "ctr-0007",
+      "price": 3.0
+    }
+  ],
+  "accounting": {
+    "inputs": 111,
+    "transfers": 111,
+    "settled": 97,
+    "held": 14,
+    "rejected": 0,
+    "deadletter": 0,
+    "invoices": 0,
+    "pending": 0,
+    "accounted": 111,
+    "balanced": true
+  },
+  "expelled": [
+    "scorer-c"
+  ],
+  "audit_spend": 120.0,
+  "earned": 144.0,
+  "product": {
+    "id": "forge/escrow-processor",
+    "price": 12.0,
+    "buyer": "buyer",
+    "bond": 50.0
+  },
+  "economy": {
+    "revenue": 144.0,
+    "product_vendor_cost": 120.0,
+    "audit_cost_total": 120.0,
+    "product_margin": 24.0,
+    "forge_spent_total": 1179.0,
+    "forge_stake_pool": 150.0,
+    "treasury": 150,
+    "note": "the bazaar closes its books: the Forge bought capability, proved it, composed it, sold it"
+  }
+}

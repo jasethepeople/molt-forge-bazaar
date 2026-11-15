@@ -1,0 +1,339 @@
+{
+  "vendor": "scorer-b",
+  "capability": "risk-scorer",
+  "probes": [
+    {
+      "probe": "happy-0",
+      "payload_sha": "d262e5e27d003520",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-000000000000",
+          "kind": "claim",
+          "amount": 250.0,
+          "ts": 1700000000,
+          "risk": 0.0,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 8.12,
+      "contract_violations": []
+    },
+    {
+      "probe": "happy-1",
+      "payload_sha": "207d893dbbc0b7a3",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-000000000001",
+          "kind": "claim",
+          "amount": 900.5,
+          "ts": 1700000100,
+          "risk": 1e-06,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 8.39,
+      "contract_violations": []
+    },
+    {
+      "probe": "happy-2",
+      "payload_sha": "b29fd380b7590837",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-000000000002",
+          "kind": "claim",
+          "amount": 10,
+          "ts": 1700000200,
+          "risk": 0.0,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 8.04,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-ladder-0",
+      "payload_sha": "b8f0b082bbf7b2e2",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-l0000000000",
+          "kind": "claim",
+          "amount": 0,
+          "ts": 1700000000,
+          "risk": 0.0,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 11.17,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-ladder-1",
+      "payload_sha": "67f9f27cf2a83673",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-l0000000001",
+          "kind": "claim",
+          "amount": 1,
+          "ts": 1700000000,
+          "risk": 0.0,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 11.22,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-ladder-2",
+      "payload_sha": "908283711907794b",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-l0000000002",
+          "kind": "claim",
+          "amount": 100,
+          "ts": 1700000000,
+          "risk": 0.0,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 6.75,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-ladder-3",
+      "payload_sha": "d8c12aa624535fe2",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-l0000000003",
+          "kind": "claim",
+          "amount": 10000,
+          "ts": 1700000000,
+          "risk": 8e-06,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 8.0,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-ladder-4",
+      "payload_sha": "c7d12ad334b3f652",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-l0000000004",
+          "kind": "claim",
+          "amount": 999999.99,
+          "ts": 1700000000,
+          "risk": 0.0008,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 7.74,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-ladder-5",
+      "payload_sha": "2ae080c186b41ddf",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-l0000000005",
+          "kind": "claim",
+          "amount": 1000000,
+          "ts": 1700000000,
+          "risk": 0.0008,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 10.13,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-ladder-6",
+      "payload_sha": "e76b0784678ecdaf",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-l0000000006",
+          "kind": "claim",
+          "amount": 50000000,
+          "ts": 1700000000,
+          "risk": 0.04,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 7.91,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-ladder-7",
+      "payload_sha": "c4ea35dfbaf0a128",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-l0000000007",
+          "kind": "claim",
+          "amount": 1000000000.0,
+          "ts": 1700000000,
+          "risk": 0.8,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 30,
+      "latency_ms": 6.42,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-ladder-8",
+      "payload_sha": "f47c5ae4ff759ca2",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "payload violates canonical schema"
+        }
+      },
+      "gas": 30,
+      "latency_ms": 7.54,
+      "contract_violations": []
+    },
+    {
+      "probe": "dispute-flag",
+      "payload_sha": "270ca7fcecdeb86f",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-disp000001",
+          "kind": "dispute",
+          "amount": 100,
+          "ts": 1700000000,
+          "risk": 0.15,
+          "scorer": "scorer-b/v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 8.78,
+      "contract_violations": []
+    },
+    {
+      "probe": "bad-kind",
+      "payload_sha": "a364a63e42591af4",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "payload violates canonical schema"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 10.46,
+      "contract_violations": []
+    },
+    {
+      "probe": "missing-field",
+      "payload_sha": "85261ff539e0ac0f",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "payload violates canonical schema"
+        }
+      },
+      "gas": 27,
+      "latency_ms": 11.11,
+      "contract_violations": []
+    },
+    {
+      "probe": "risk-injection",
+      "payload_sha": "c2ad59481bd2aa1b",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "payload violates canonical schema"
+        }
+      },
+      "gas": 30,
+      "latency_ms": 11.05,
+      "contract_violations": []
+    }
+  ],
+  "observed_schema": {
+    "type": "object",
+    "properties": {
+      "amount": {
+        "type": "number",
+        "min": 0,
+        "max": 1000000000.0
+      },
+      "event_id": {
+        "type": "string",
+        "minLength": 13,
+        "maxLength": 15
+      },
+      "kind": {
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 7,
+        "enum": [
+          "claim",
+          "dispute"
+        ]
+      },
+      "risk": {
+        "type": "number",
+        "min": 0.0,
+        "max": 0.8
+      },
+      "scorer": {
+        "type": "string",
+        "minLength": 11,
+        "maxLength": 11,
+        "enum": [
+          "scorer-b/v1"
+        ]
+      },
+      "ts": {
+        "type": "integer",
+        "min": 1700000000,
+        "max": 1700000200,
+        "enum": [
+          1700000000,
+          1700000100,
+          1700000200
+        ]
+      }
+    },
+    "required": [
+      "amount",
+      "event_id",
+      "kind",
+      "risk",
+      "scorer",
+      "ts"
+    ],
+    "additionalProperties": false
+  },
+  "direct_violations": [],
+  "violation_records": [],
+  "schema_mismatch": [],
+  "verdict": "consistent",
+  "transcript_sha": "30fccd6aac7efa09"
+}

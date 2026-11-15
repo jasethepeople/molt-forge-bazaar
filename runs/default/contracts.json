@@ -1,0 +1,1166 @@
+{
+  "ctr-0001": {
+    "vendor": "normalizer-b",
+    "capability": "data-normalizer",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "raw_id": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 24
+        },
+        "amount": {
+          "type": "number",
+          "min": 0
+        },
+        "ts": {
+          "type": "number"
+        },
+        "memo": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "raw_id",
+        "kind",
+        "amount",
+        "ts"
+      ],
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        },
+        "norm": {
+          "type": "string",
+          "enum": [
+            "v1"
+          ]
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts",
+        "norm"
+      ],
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "code",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "schema_hash": "149dc2af2b8390edd342d100130d75c4",
+    "price": 2.0,
+    "gas_ceiling": 400,
+    "latency_ms_max": 50,
+    "liability": {
+      "stake": 50,
+      "slash_on": [
+        "output_violation",
+        "gas_overrun",
+        "breaking_bump_without_notice"
+      ],
+      "settlement": "molt-anchor inscribed, stake forfeited to treasury"
+    },
+    "contract_id": "ctr-0001",
+    "sealed_ts": 1794765838.87756,
+    "forge_sig": "dae7213186489216843f47a1bdd995f5c63d0f1904649520e7f3eea7ed5a50b44cfc6fc9af6c9168268824b0ecb820113ef4c38865676ceb7c2da92ce385ce09",
+    "vendor_sig": "f8530381463febc402d24645cbc1202a70fdd3be75d821b7a05b4de99f8a38f8453adce5b1c7886b236c6b6473c013c588135e77a0c8154dcb0aaa2d2b032b01"
+  },
+  "ctr-0002": {
+    "vendor": "scheduler-a",
+    "capability": "scheduler",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        },
+        "risk": {
+          "type": "number",
+          "min": 0,
+          "max": 1
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts",
+        "risk"
+      ],
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "trigger_id": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 64
+        },
+        "batch_no": {
+          "type": "integer",
+          "min": 1
+        },
+        "at": {
+          "type": "integer"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "settle"
+          ]
+        }
+      },
+      "required": [
+        "trigger_id",
+        "batch_no",
+        "at",
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "code",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "schema_hash": "d7e10713f11723bd101df6946b5a2b8c",
+    "price": 1.0,
+    "gas_ceiling": 400,
+    "latency_ms_max": 50,
+    "liability": {
+      "stake": 50,
+      "slash_on": [
+        "output_violation",
+        "gas_overrun",
+        "breaking_bump_without_notice"
+      ],
+      "settlement": "molt-anchor inscribed, stake forfeited to treasury"
+    },
+    "contract_id": "ctr-0002",
+    "sealed_ts": 1794765838.8787823,
+    "forge_sig": "3f66333152973ec949c2045c0e1b173d17f63f38132dafaff90b8bbf0e9a99f56deda472974a8d56f0f4c6f6ba2f7bc8806b5ec4115bf922c7427ee6d82fdd03",
+    "vendor_sig": "10bbf2c7c6b07bed3dbaae3b4d73945906010681fb98ad5bf6d42a6d371b7d16fba78bd7dd242a816e795da08b7a1cacd6931a547462423bd36bda5d11174605"
+  },
+  "ctr-0003": {
+    "vendor": "scheduler-b",
+    "capability": "scheduler",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        },
+        "risk": {
+          "type": "number",
+          "min": 0,
+          "max": 1
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts",
+        "risk"
+      ],
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "trigger_id": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 64
+        },
+        "batch_no": {
+          "type": "integer",
+          "min": 1
+        },
+        "at": {
+          "type": "integer"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "settle"
+          ]
+        }
+      },
+      "required": [
+        "trigger_id",
+        "batch_no",
+        "at",
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "code",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "schema_hash": "d7e10713f11723bd101df6946b5a2b8c",
+    "price": 1.0,
+    "gas_ceiling": 400,
+    "latency_ms_max": 50,
+    "liability": {
+      "stake": 50,
+      "slash_on": [
+        "output_violation",
+        "gas_overrun",
+        "breaking_bump_without_notice"
+      ],
+      "settlement": "molt-anchor inscribed, stake forfeited to treasury"
+    },
+    "contract_id": "ctr-0003",
+    "sealed_ts": 1794765838.879926,
+    "forge_sig": "51ac4077f7901b08618f864882580a144dcd9bafe6fe42bf7989be1f551f29a14d04cd933275ac9fd0ebc5503ff32f0d40991f22a4fecafc3d8344bc03bc8c07",
+    "vendor_sig": "d3d07d6d06cf22b0d31dd0bcafe7c0bae33e63ae9b9ab6dc3501645dc17a2698199c9bbe381a752379396cab5744cbb40b14f5f84d0f875896c78723a4a2990e"
+  },
+  "ctr-0004": {
+    "vendor": "scorer-a",
+    "capability": "risk-scorer",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts"
+      ],
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        },
+        "risk": {
+          "type": "number",
+          "min": 0,
+          "max": 1
+        },
+        "scorer": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts",
+        "risk",
+        "scorer"
+      ],
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "code",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "schema_hash": "a5bca6f75f554a93a37551ebaa5d6712",
+    "price": 2.0,
+    "gas_ceiling": 400,
+    "latency_ms_max": 50,
+    "liability": {
+      "stake": 50,
+      "slash_on": [
+        "output_violation",
+        "gas_overrun",
+        "breaking_bump_without_notice"
+      ],
+      "settlement": "molt-anchor inscribed, stake forfeited to treasury"
+    },
+    "contract_id": "ctr-0004",
+    "sealed_ts": 1794765838.8810415,
+    "forge_sig": "fdb8ed373c6ca6228a324207c0df1ec7829f7c9fe3100d6f43b7405e32cf3fa5f4e584751ca6af3b0b2a347d904fea73093c685e898dce4aecf2050ef8300207",
+    "vendor_sig": "1b896512818614c84a0685d5136a6e085b08180001e5d472931363ccc35a800ce47543c5532cc246276ee26def3df4d69324a96577402e81af4e7ae44bb9410b"
+  },
+  "ctr-0005": {
+    "vendor": "scorer-b",
+    "capability": "risk-scorer",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts"
+      ],
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        },
+        "risk": {
+          "type": "number",
+          "min": 0,
+          "max": 1
+        },
+        "scorer": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts",
+        "risk",
+        "scorer"
+      ],
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "code",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "schema_hash": "a5bca6f75f554a93a37551ebaa5d6712",
+    "price": 1.5,
+    "gas_ceiling": 400,
+    "latency_ms_max": 50,
+    "liability": {
+      "stake": 50,
+      "slash_on": [
+        "output_violation",
+        "gas_overrun",
+        "breaking_bump_without_notice"
+      ],
+      "settlement": "molt-anchor inscribed, stake forfeited to treasury"
+    },
+    "contract_id": "ctr-0005",
+    "sealed_ts": 1794765838.8821707,
+    "forge_sig": "5d9daf8664e60432aafa14ddf349e55bfe00aa34f7b74e1bac1b5dc2e609cfddc9825782d22bbda20a0a53481b7cee0f5ae9de2594bd805d0290a64912936508",
+    "vendor_sig": "ef02548b990d5d9023c8d02f59fbf1cd475fe19567c44f82e6e14f8f33d0614b2216c7416db774037fa7dddf56480aa4f709ec0e90e7f8456af601d3e417c308"
+  },
+  "ctr-0006": {
+    "vendor": "settler",
+    "capability": "settler",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "risk": {
+          "type": "number",
+          "min": 0,
+          "max": 1
+        },
+        "trigger_id": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 64
+        },
+        "trigger_ts": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "risk",
+        "trigger_id",
+        "trigger_ts"
+      ],
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "transfer_id": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 64
+        },
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "to": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "settled_at": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "settled",
+            "held"
+          ]
+        }
+      },
+      "required": [
+        "transfer_id",
+        "event_id",
+        "amount",
+        "to",
+        "settled_at",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "code",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "schema_hash": "f39b4cb5c1fe8a8f69b53b3a809f7c36",
+    "price": 3.0,
+    "gas_ceiling": 400,
+    "latency_ms_max": 50,
+    "liability": {
+      "stake": 50,
+      "slash_on": [
+        "output_violation",
+        "gas_overrun",
+        "breaking_bump_without_notice"
+      ],
+      "settlement": "molt-anchor inscribed, stake forfeited to treasury"
+    },
+    "contract_id": "ctr-0006",
+    "sealed_ts": 1794765838.883333,
+    "forge_sig": "376590b1be6ef8cf5b9e80fa96cf8721c7fdc109aa2411737d7e9e6b4b34d980045de7573ebf1114a0b000ed3cbd786646c92f3178f702630244cc2afb539908",
+    "vendor_sig": "9e38933e1b67d39e891d0979d848aec6210398d22d12d85a81101fedb25cbc0d642558f6505bc5a046c144d45be00803a22987b10e1478980778bc6ce1dbf00b"
+  },
+  "ctr-0007": {
+    "vendor": "settler-b",
+    "capability": "settler",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "risk": {
+          "type": "number",
+          "min": 0,
+          "max": 1
+        },
+        "trigger_id": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 64
+        },
+        "trigger_ts": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "risk",
+        "trigger_id",
+        "trigger_ts"
+      ],
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "transfer_id": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 64
+        },
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "to": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "settled_at": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "settled",
+            "held"
+          ]
+        }
+      },
+      "required": [
+        "transfer_id",
+        "event_id",
+        "amount",
+        "to",
+        "settled_at",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "code",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "schema_hash": "f39b4cb5c1fe8a8f69b53b3a809f7c36",
+    "price": 3.0,
+    "gas_ceiling": 400,
+    "latency_ms_max": 50,
+    "liability": {
+      "stake": 50,
+      "slash_on": [
+        "output_violation",
+        "gas_overrun",
+        "breaking_bump_without_notice"
+      ],
+      "settlement": "molt-anchor inscribed, stake forfeited to treasury"
+    },
+    "contract_id": "ctr-0007",
+    "sealed_ts": 1794765838.8845081,
+    "forge_sig": "6dea10f3332581080f7dc6432ee5f008c4ac7d44c77eae582ab84a38657d4e9c2375d4efbed69e2ea2f2d2ae627c5bcb4751e135faa0ef8757081ee4fcf92709",
+    "vendor_sig": "7e480cadc4fe9fcc70f53c9c5fef7bc9286cbe004cdeebc7af126bd56fd59136c09e2be530b8b1424dab02835434c05b4f16541037622a2a6a97fedc14fcd704"
+  },
+  "ctr-0008": {
+    "vendor": "scorer-a",
+    "capability": "risk-scorer",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts"
+      ],
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        },
+        "risk": {
+          "type": "number",
+          "min": 0,
+          "max": 1
+        },
+        "scorer": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts",
+        "risk",
+        "scorer"
+      ],
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "code",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "schema_hash": "a5bca6f75f554a93a37551ebaa5d6712",
+    "price": 4.0,
+    "gas_ceiling": 400,
+    "latency_ms_max": 50,
+    "liability": {
+      "stake": 25,
+      "slash_on": [
+        "output_violation",
+        "gas_overrun",
+        "breaking_bump_without_notice"
+      ],
+      "settlement": "molt-anchor inscribed, stake forfeited to treasury"
+    },
+    "contract_id": "ctr-0008",
+    "sealed_ts": 1794765838.9418237,
+    "forge_sig": "c77d0a7c323babe70889c2bde4e02bc70453e4fc8727040c4b0c496887bff72e1d493b0559c86291fbc07892252a3c129eaf6f43335697e7daa11979ad86010d",
+    "vendor_sig": "d412ef5b70886d53f723725496702af94e73ef7a3a7c6f9f348a6ff6ebe6171bad989a2f140553444e1c8fcba9af26750ac0fcdada1048fc3a7a82cb31693f05"
+  },
+  "ctr-0009": {
+    "vendor": "scorer-c",
+    "capability": "risk-scorer",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts"
+      ],
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "dispute",
+            "refund"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "min": 0,
+          "max": 1000000000.0
+        },
+        "ts": {
+          "type": "integer"
+        },
+        "risk": {
+          "type": "number",
+          "min": 0,
+          "max": 1
+        },
+        "scorer": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "amount",
+        "ts",
+        "risk",
+        "scorer"
+      ],
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "code",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "schema_hash": "a5bca6f75f554a93a37551ebaa5d6712",
+    "price": 1.0,
+    "gas_ceiling": 400,
+    "latency_ms_max": 50,
+    "liability": {
+      "stake": 25,
+      "slash_on": [
+        "output_violation",
+        "gas_overrun",
+        "breaking_bump_without_notice"
+      ],
+      "settlement": "molt-anchor inscribed, stake forfeited to treasury"
+    },
+    "contract_id": "ctr-0009",
+    "sealed_ts": 1794765839.1120615,
+    "forge_sig": "af8d9539186d9fbdc24a4c2e87ee6367a124919f5e84a3492dab891448cae8477e62a23c9c48e4cc4fdd8006727e3fa5a47d605b25a4807c45cddc7b37b6410e",
+    "vendor_sig": "e21aef587cc89e0eb1b0c07734905200d94540071656bf6e57d6e0ab83581f6b3403022091402bffe15511b16fd03c2dcc4f801759953c765b86efc96092d40f"
+  },
+  "ctr-0010": {
+    "contract_id": "ctr-0010",
+    "vendor": "forge/escrow-processor",
+    "buyer": "buyer",
+    "capability": "escrow-processor",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "required": [
+        "raw_id",
+        "kind",
+        "amount",
+        "ts"
+      ],
+      "properties": {
+        "raw_id": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 24
+        },
+        "amount": {
+          "type": "number",
+          "min": 0
+        },
+        "ts": {
+          "type": "integer",
+          "min": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "output_schema": {
+      "type": "object",
+      "required": [
+        "input_id",
+        "status"
+      ],
+      "properties": {
+        "input_id": {
+          "type": "string",
+          "minLength": 3
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "settled",
+            "accepted",
+            "rejected",
+            "deadletter"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "required": [
+        "code",
+        "detail"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "additionalProperties": false
+    },
+    "price": 12.0,
+    "gas_ceiling": 1600,
+    "latency_ms_max": 120,
+    "liability": {
+      "stake": 50.0,
+      "slash_on": [
+        "output_violation",
+        "nondeterminism",
+        "dropped_event"
+      ],
+      "settlement": "molt-anchor inscribed"
+    },
+    "attestation_sha": "0a3571303e5f734f",
+    "offer_env": "ef3b81f903aad2e42e6ffc32986db0e1d120c9d769d1c62987c95e6eea2161fa",
+    "forge_env": "4bb584df2d537f0fb6f5de2f4b61779f3b1a3fb87cacabc50d6221abf0c9ece8",
+    "buyer_env": "4fffcc7426adddf39d00948dbb450a6b538af7db027958f59bd5b9c3e159c128"
+  }
+}

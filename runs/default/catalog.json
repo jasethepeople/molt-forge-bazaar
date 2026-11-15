@@ -1,0 +1,318 @@
+{
+  "normalizer-a": {
+    "vendor": "normalizer-a",
+    "capability": "data-normalizer",
+    "version": 1,
+    "attestation": {
+      "vendor": "normalizer-a",
+      "capability": "data-normalizer",
+      "pub": "8930685309746eb18d50a7afba45e066a100889becda969eda3df3d06c459421",
+      "audit_head": "0000000000000000000000000000000000000000000000000000000000000000",
+      "events_audited": 0,
+      "schema_hash": "149dc2af2b8390edd342d100130d75c4",
+      "gas_history_p99": 38,
+      "sig": "85625e88339e5ead35f8515629da2dc1076211175786d6eeda660faf172c872e951d5ec2ee30d31ccc653974c4f998907df2e37c613e20b3c27e5e6664533706"
+    },
+    "pub": "8930685309746eb18d50a7afba45e066a100889becda969eda3df3d06c459421",
+    "entry_hash": "7429f5123dc81d4a4b302046545fc5ee7cc6425c612da0770d62b9e23e9c5ac2",
+    "sig": "5cf8dbf5357ab89c8842966476e7ef6f816749977b1988c5ed710930dc518ea8f64f07eeb8063270e6c2887a10ad9cc77cbed52b241dc00ceae1f48c65ea8706",
+    "declared_schema_hashes": {
+      "input": "149dc2af2b8390ed",
+      "output": "d342d100130d75c4"
+    }
+  },
+  "normalizer-b": {
+    "vendor": "normalizer-b",
+    "capability": "data-normalizer",
+    "version": 1,
+    "attestation": {
+      "vendor": "normalizer-b",
+      "capability": "data-normalizer",
+      "pub": "d7c6a4392166a8a3067bf782157d8b282c98eb07dd8d0bc52ad368e9f9a4389e",
+      "audit_head": "0000000000000000000000000000000000000000000000000000000000000000",
+      "events_audited": 0,
+      "schema_hash": "149dc2af2b8390edd342d100130d75c4",
+      "gas_history_p99": 38,
+      "sig": "4c6e8c7f450107597bf234f059ce6ef62ec9a4ea512dfb11cae4d5c3d0c4160a9ed0fbf5a7c7f8c940ca9935928faecfd606ea1f4dd389f0c01caa5293b8e307"
+    },
+    "pub": "d7c6a4392166a8a3067bf782157d8b282c98eb07dd8d0bc52ad368e9f9a4389e",
+    "entry_hash": "922f904ccf6f32f7d7606fbf688dd07a98df3d3d41c7a90e9ab32265644ee18a",
+    "sig": "e1c402c8f3b02d364b6f3ad0e22d6d8b89dd75d11fc597f277ceda9e92945293ed3600f1ff43a0bfa9a45ea5c79dffb0a680798e3268ca53e9d98d993580c104",
+    "declared_schema_hashes": {
+      "input": "149dc2af2b8390ed",
+      "output": "d342d100130d75c4"
+    }
+  },
+  "scheduler-a": {
+    "vendor": "scheduler-a",
+    "capability": "scheduler",
+    "version": 1,
+    "attestation": {
+      "vendor": "scheduler-a",
+      "capability": "scheduler",
+      "pub": "1e841115b8667871001eb32453de6d2f91d1a1189c5967071e27277061dfcd3a",
+      "audit_head": "0000000000000000000000000000000000000000000000000000000000000000",
+      "events_audited": 0,
+      "schema_hash": "d7e10713f11723bd101df6946b5a2b8c",
+      "gas_history_p99": 38,
+      "sig": "335cd449d3798fbfc2d01617fbe2f275504a2560fb3f330437f686e202ef3a4c65605a29c1772a7d3e6cb5c6339d401cf59deef4d67b38814eace28847f2390b"
+    },
+    "pub": "1e841115b8667871001eb32453de6d2f91d1a1189c5967071e27277061dfcd3a",
+    "entry_hash": "b43dd150d724ef6c279f23c653d91398aa5a323f47f2e8de46fbfb8d5e08d0e5",
+    "sig": "9c1c06a0ba078621d48f275a87c6f7eaf9e0ad4d02442e06ce1cfef86b45abf7b20d54efd42de2a24df7f1fec4a0d067e8e0e98bd98dcee37f1f39d4d7015707",
+    "declared_schema_hashes": {
+      "input": "d7e10713f11723bd",
+      "output": "101df6946b5a2b8c"
+    }
+  },
+  "scheduler-b": {
+    "vendor": "scheduler-b",
+    "capability": "scheduler",
+    "version": 1,
+    "attestation": {
+      "vendor": "scheduler-b",
+      "capability": "scheduler",
+      "pub": "51040131f076dc29c7ae6f0b4bbf1c5c14320f17b2e8f34d44d21e862d9a41a8",
+      "audit_head": "0000000000000000000000000000000000000000000000000000000000000000",
+      "events_audited": 0,
+      "schema_hash": "d7e10713f11723bd101df6946b5a2b8c",
+      "gas_history_p99": 38,
+      "sig": "711678e2c1d526b823114b3de28c1b1b3496bbd70e6b497f79c1126e81d0424e2a3b7f48f2d0a1fd45f99a2069f243dffd41165bff0f0011b1d2de9c28ec5701"
+    },
+    "pub": "51040131f076dc29c7ae6f0b4bbf1c5c14320f17b2e8f34d44d21e862d9a41a8",
+    "entry_hash": "d2916e562f6b2553ca199496c9a6df56cc9720ad37c91db077649b34973ca367",
+    "sig": "cc512f2491f18f6c6a8f7b3e7d4e1d0b4f116a3d38c67629dbf804f3f79cb7d2ebc0e0ce63bedd25b93cd1bae2f2196369dd67b8bb672efc91f3208448626c0f",
+    "declared_schema_hashes": {
+      "input": "d7e10713f11723bd",
+      "output": "101df6946b5a2b8c"
+    }
+  },
+  "scorer-a": {
+    "vendor": "scorer-a",
+    "capability": "risk-scorer",
+    "version": 2,
+    "attestation": {
+      "vendor": "scorer-a",
+      "capability": "risk-scorer",
+      "pub": "061a30efe82273770ad0fdb46df54bfb6746f12f6d6cfb4f84886679d2fa1dd2",
+      "audit_head": "b63114215df225d5afd665f5a90c3d30142f8409023f063320cc9b276d1d7e2a",
+      "events_audited": 147,
+      "schema_hash": "a5bca6f75f554a93e5d8baa2f792173a",
+      "gas_history_p99": 38,
+      "sig": "51c7a9d0bc0c41316eb77f476c5f68de67a291f0a4138317703bc190e7543bfa62b45f8f3b66e6c9cc8a1f64b9ae7c071e190d51f1b1e7013bf2e8680ea95c0e"
+    },
+    "pub": "061a30efe82273770ad0fdb46df54bfb6746f12f6d6cfb4f84886679d2fa1dd2",
+    "entry_hash": "a50ac57be07af1c827351692496bb9acd5c832afa3bd9120b44f66b94ac723d1",
+    "sig": "d6f04066134bb54f7d8553c2526090d1522f75d5e0b2f402368190ff765c840a3e051e06a1cdf0379f72424cb4bc236379f5ce4d7a73c55e12f4f31d678cb20a",
+    "declared_schema_hashes": {
+      "input": "a5bca6f75f554a93",
+      "output": "e5d8baa2f792173a"
+    }
+  },
+  "scorer-b": {
+    "vendor": "scorer-b",
+    "capability": "risk-scorer",
+    "version": 1,
+    "attestation": {
+      "vendor": "scorer-b",
+      "capability": "risk-scorer",
+      "pub": "18a9ffca791708580a1486b14bf3c5a4c4a507eb0679698aa2de7904119d38bf",
+      "audit_head": "0000000000000000000000000000000000000000000000000000000000000000",
+      "events_audited": 0,
+      "schema_hash": "a5bca6f75f554a93a37551ebaa5d6712",
+      "gas_history_p99": 38,
+      "sig": "d55517ee9e61830679f376d4be3070639998015674b9ca8d04e84aaa1ff4b83521805efa834d4cf670f845acf6eecf9372640ec7e8e8b13beca985e236324f07"
+    },
+    "pub": "18a9ffca791708580a1486b14bf3c5a4c4a507eb0679698aa2de7904119d38bf",
+    "entry_hash": "0ef77cdf7ac37e56b7721d486246ea466ad72d4b549fb494c25fc7341a4c9f3a",
+    "sig": "50504f7533dcc2b901b4d9fa0c2caee398507c88752b0ec3571a15142a03403d64e3c65d13a77c9077ae82d2c94ab9445c6c8f12a38713de99ecc3811c29a40b",
+    "declared_schema_hashes": {
+      "input": "a5bca6f75f554a93",
+      "output": "a37551ebaa5d6712"
+    }
+  },
+  "settler": {
+    "vendor": "settler",
+    "capability": "settler",
+    "version": 1,
+    "attestation": {
+      "vendor": "settler",
+      "capability": "settler",
+      "pub": "71d2c6ef3fc9b13fee9ffb032bce15d8536de73c21d26eaf4e48d2518446ee7a",
+      "audit_head": "0000000000000000000000000000000000000000000000000000000000000000",
+      "events_audited": 0,
+      "schema_hash": "f39b4cb5c1fe8a8f69b53b3a809f7c36",
+      "gas_history_p99": 38,
+      "sig": "ee4d2d8d3fcac0ab642a1f5336ff3cfeb7bd8bf994bb21d5390dd50309f28d4552c54be8302de406712c8c139c6d98a481548dd3a577a5a2158ae0ed5b87a504"
+    },
+    "pub": "71d2c6ef3fc9b13fee9ffb032bce15d8536de73c21d26eaf4e48d2518446ee7a",
+    "entry_hash": "2b09f1c56289a60422757cfe3451c67ae79099a6323a6b60337ea937f07e666a",
+    "sig": "2dfa92425c1079c196ed12c011f3ace3c1ba8560e2308306e63d675ffa2f71c224d82b26dceb45ca87559265616f88cd54be51d86329218b4a9875f6355bde07",
+    "declared_schema_hashes": {
+      "input": "f39b4cb5c1fe8a8f",
+      "output": "69b53b3a809f7c36"
+    }
+  },
+  "settler-b": {
+    "vendor": "settler-b",
+    "capability": "settler",
+    "version": 1,
+    "attestation": {
+      "vendor": "settler-b",
+      "capability": "settler",
+      "pub": "1506251d5bf00561faf42ef56aa39ca62786eae7ea2d33350ef80237048315ff",
+      "audit_head": "0000000000000000000000000000000000000000000000000000000000000000",
+      "events_audited": 0,
+      "schema_hash": "f39b4cb5c1fe8a8f69b53b3a809f7c36",
+      "gas_history_p99": 38,
+      "sig": "7eaf04f66555f9264b3c5dc0aac027f3d2e6c68ad46bf945f9f171398fff609d37f0a9935e7ea14cff9db4eee97f9db88cdd5142ac8a4f38a89ca8785292d308"
+    },
+    "pub": "1506251d5bf00561faf42ef56aa39ca62786eae7ea2d33350ef80237048315ff",
+    "entry_hash": "5dc56ed0e3cde63d55eb8ddfa0063b05f743781f92e61a5de5349d6806b79aab",
+    "sig": "1e09a44034db287cd16e5a29c85d13b4f18f766d06c65880140cd7e071240941ee02417f098456ff36a2bbf58d4ab911ad062e79709922893b524545e669bc0c",
+    "declared_schema_hashes": {
+      "input": "f39b4cb5c1fe8a8f",
+      "output": "69b53b3a809f7c36"
+    }
+  },
+  "scorer-c": {
+    "vendor": "scorer-c",
+    "capability": "risk-scorer",
+    "version": 1,
+    "attestation": {
+      "vendor": "scorer-c",
+      "capability": "risk-scorer",
+      "pub": "4f2d41126f6671d63c15630bb83c92ffd94dcff9333d77fc084bac264c57d471",
+      "audit_head": "0000000000000000000000000000000000000000000000000000000000000000",
+      "events_audited": 0,
+      "schema_hash": "a5bca6f75f554a93a37551ebaa5d6712",
+      "gas_history_p99": 38,
+      "sig": "d14fcfb32b93e88f5d1b5b8e64af766cfb86d5ca5c365b9befc8cf530cb1dd1420229ad1828306d402cc82d9c33c027318b0fbf52910e62c5c8156955fc44a07"
+    },
+    "pub": "4f2d41126f6671d63c15630bb83c92ffd94dcff9333d77fc084bac264c57d471",
+    "entry_hash": "48c4025127503cd83d0cd01f68a1a1afc3bafea0cc50868c7741e431c3122ca7",
+    "sig": "9e284d12af385399ec03c1b684567977e8f885f49c499b324808c5211b9ebaab081cf0922cc94e77a67265ac7818e43596fd3189f58026ade9bebf6a3c5e3a04",
+    "declared_schema_hashes": {
+      "input": "a5bca6f75f554a93",
+      "output": "a37551ebaa5d6712"
+    }
+  },
+  "forge/escrow-processor": {
+    "vendor": "forge/escrow-processor",
+    "capability": "escrow-processor",
+    "version": 1,
+    "input_schema": {
+      "type": "object",
+      "required": [
+        "raw_id",
+        "kind",
+        "amount",
+        "ts"
+      ],
+      "properties": {
+        "raw_id": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 64
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 24
+        },
+        "amount": {
+          "type": "number",
+          "min": 0
+        },
+        "ts": {
+          "type": "integer",
+          "min": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "output_schema": {
+      "type": "object",
+      "required": [
+        "input_id",
+        "status"
+      ],
+      "properties": {
+        "input_id": {
+          "type": "string",
+          "minLength": 3
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "settled",
+            "accepted",
+            "rejected",
+            "deadletter"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "error_schema": {
+      "type": "object",
+      "required": [
+        "code",
+        "detail"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "additionalProperties": false
+    },
+    "price": 12.0,
+    "gas_ceiling": 1600,
+    "attestation": {
+      "kind": "composed-product/1",
+      "stages": [
+        {
+          "stage": "normalize",
+          "vendor": "normalizer-b",
+          "contract_id": "ctr-0001",
+          "price": 2.0
+        },
+        {
+          "stage": "score",
+          "vendor": "scorer-a",
+          "contract_id": "ctr-0008",
+          "price": 4.0
+        },
+        {
+          "stage": "schedule",
+          "vendor": "scheduler-b",
+          "contract_id": "ctr-0003",
+          "price": 1.0
+        },
+        {
+          "stage": "settle",
+          "vendor": "settler-b",
+          "contract_id": "ctr-0007",
+          "price": 3.0
+        }
+      ],
+      "proof_sha": "0a3571303e5f734f",
+      "obligations": "all pass (see proof-report.json)",
+      "pub": "999c01f18463195c7bed5a65a24b2c308509d5410fb34ced21452a42004bf413"
+    },
+    "pub": "999c01f18463195c7bed5a65a24b2c308509d5410fb34ced21452a42004bf413",
+    "entry_hash": "7942213bd6433ebac1f339d700994fd69f8d97a4c94260278367cbef5fa832b8",
+    "sig": "f355d0e17a513bea73813c8dbc87e00604d893a31e3e8d4b224625fa81eff3754e415b93c873813005b84c4e1b5c790a8b822211ffdd95620acba137a94f450a",
+    "declared_schema_hashes": {
+      "input": "cca31ffca1ef7ddf",
+      "output": "118deb75259c49ac"
+    }
+  }
+}

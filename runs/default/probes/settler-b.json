@@ -1,0 +1,129 @@
+{
+  "vendor": "settler-b",
+  "capability": "settler",
+  "probes": [
+    {
+      "probe": "settle-0",
+      "payload_sha": "a052673af27de819",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "missing required field"
+        }
+      },
+      "gas": 34,
+      "latency_ms": 12.61,
+      "contract_violations": []
+    },
+    {
+      "probe": "settle-1",
+      "payload_sha": "f23afc8aecfea953",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "missing required field"
+        }
+      },
+      "gas": 34,
+      "latency_ms": 13.79,
+      "contract_violations": []
+    },
+    {
+      "probe": "settle-2",
+      "payload_sha": "61f51e08f10405bb",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "missing required field"
+        }
+      },
+      "gas": 34,
+      "latency_ms": 9.8,
+      "contract_violations": []
+    },
+    {
+      "probe": "hold-boundary",
+      "payload_sha": "c175e1449fc04ae2",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "missing required field"
+        }
+      },
+      "gas": 34,
+      "latency_ms": 12.44,
+      "contract_violations": []
+    },
+    {
+      "probe": "hold-boundary-2",
+      "payload_sha": "41b764017bc865c9",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "missing required field"
+        }
+      },
+      "gas": 33,
+      "latency_ms": 11.43,
+      "contract_violations": []
+    },
+    {
+      "probe": "idempotency-1",
+      "payload_sha": "d2489dcf77b43803",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "missing required field"
+        }
+      },
+      "gas": 33,
+      "latency_ms": 10.79,
+      "contract_violations": []
+    },
+    {
+      "probe": "idempotency-2",
+      "payload_sha": "d2489dcf77b43803",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "missing required field"
+        }
+      },
+      "gas": 33,
+      "latency_ms": 7.15,
+      "contract_violations": []
+    },
+    {
+      "probe": "risk-out-of-range",
+      "payload_sha": "f75d5ecf31925026",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "missing required field"
+        }
+      },
+      "gas": 34,
+      "latency_ms": 8.23,
+      "contract_violations": []
+    }
+  ],
+  "observed_schema": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "direct_violations": [],
+  "violation_records": [],
+  "schema_mismatch": [],
+  "verdict": "consistent",
+  "transcript_sha": "30e89daf81f04743"
+}

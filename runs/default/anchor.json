@@ -1,0 +1,373 @@
+{
+  "kind": "molt-anchor/genesis",
+  "mesh_id": "molt-forge",
+  "protocol_version": 1,
+  "validators": {
+    "forge": {
+      "pub": "999c01f18463195c7bed5a65a24b2c308509d5410fb34ced21452a42004bf413",
+      "stake": 0
+    }
+  },
+  "genesis_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "created_ts": 1794765838.8420815,
+  "bootstrap": "node:forge@d5ad729b157049db",
+  "audit_trail": [
+    {
+      "n": 0,
+      "ts": 1794765838.8458862,
+      "kind": "forge.genesis",
+      "detail": {
+        "forge": "node:forge@d5ad729b157049db"
+      },
+      "prev": "90b0f2bc7d196e0074998a15c31017d9ffeca42af9c4e092dd7734730ad6bec2",
+      "hash": "78ae097082371a06d2dcafa439b7ff42eab8270f980707020505e2c5eb850bb6",
+      "sig": "be2dcb237f4a6916dd0c85d76184072aa89c6e2cc653c13b5c965da9676447a0630867a4f956208c1c9309be92b1e1dbc4415d663b70e42f23b5ae2a8aa6f501",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 1,
+      "ts": 1794765838.8595512,
+      "kind": "disqualification",
+      "detail": {
+        "vendor": "normalizer-a",
+        "reason": "declared schema contradicted by probed behavior",
+        "evidence": "9667320e9383a13e"
+      },
+      "prev": "78ae097082371a06d2dcafa439b7ff42eab8270f980707020505e2c5eb850bb6",
+      "hash": "472e997fd3630d97553f0cc24b0a86306011c550da21f3213f1d8651146a29fe",
+      "sig": "3fbde4d97cdda0edbcc89898ecf32fad5322ee94a43548446f0dcf21aeff46b93c3156c333d74dde48bd2710146c32dc9369b263965cd71c55f62411f8a6b706",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 2,
+      "ts": 1794765838.8778427,
+      "kind": "contract.sealed",
+      "detail": {
+        "contract_id": "ctr-0001",
+        "vendor": "normalizer-b",
+        "stake": 50
+      },
+      "prev": "472e997fd3630d97553f0cc24b0a86306011c550da21f3213f1d8651146a29fe",
+      "hash": "1cc39089816895f8c5aa3fa48d996cbd4b510d95eb28b1ca47080450b315de2a",
+      "sig": "37ce8e5ca1cd444d340867888167f74e2e63a80793c26e028ad17e122f41071b0648e7445951caa747a8abe6a4d0f40d96733d9bd88b90b50608261831ed7f05",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 3,
+      "ts": 1794765838.8790393,
+      "kind": "contract.sealed",
+      "detail": {
+        "contract_id": "ctr-0002",
+        "vendor": "scheduler-a",
+        "stake": 50
+      },
+      "prev": "1cc39089816895f8c5aa3fa48d996cbd4b510d95eb28b1ca47080450b315de2a",
+      "hash": "a90e668c388e65b028258ae04a49352f67bbdb4fcacb60fba35fbbf91813a2bf",
+      "sig": "e8568e6b2801009557bd5e7bbf57ed71c402f57c39c086b0dd7bdda23c355e8678c2e6914c1a3bac1d1f2ebccdc8f05b777d8c89db4027595302a1241b3ab00b",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 4,
+      "ts": 1794765838.8801942,
+      "kind": "contract.sealed",
+      "detail": {
+        "contract_id": "ctr-0003",
+        "vendor": "scheduler-b",
+        "stake": 50
+      },
+      "prev": "a90e668c388e65b028258ae04a49352f67bbdb4fcacb60fba35fbbf91813a2bf",
+      "hash": "df7d12515b5ea136a57a4c20762841ba90590b6df8d1a3f4741591badc68652a",
+      "sig": "958ed082171219e94e25cb111118ca672722628f81b95711a3e3cd76d1daf5ee49ccae8dde0be009e832e12cc6d66a2edaf6c4ab2fe1b80cd128d5da54656105",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 5,
+      "ts": 1794765838.881307,
+      "kind": "contract.sealed",
+      "detail": {
+        "contract_id": "ctr-0004",
+        "vendor": "scorer-a",
+        "stake": 50
+      },
+      "prev": "df7d12515b5ea136a57a4c20762841ba90590b6df8d1a3f4741591badc68652a",
+      "hash": "8f54a836776188a315e8409d371320c3c16cf8ebcf80bc16f51df479b845ff73",
+      "sig": "6337e433ac4ddbbad8d4a47a806dd2f8927c89065cf74134126eb214c833bf31669d98fe5fdc98ac7b15fb0a6a7fb92e5be8fdae98429affced25f04d0ed3108",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 6,
+      "ts": 1794765838.8824408,
+      "kind": "contract.sealed",
+      "detail": {
+        "contract_id": "ctr-0005",
+        "vendor": "scorer-b",
+        "stake": 50
+      },
+      "prev": "8f54a836776188a315e8409d371320c3c16cf8ebcf80bc16f51df479b845ff73",
+      "hash": "961fa99c4db9363a0ed7ebb4b8eb25bf70e91c5a2dd7681fcca1df536301400c",
+      "sig": "4fbeaf86fd05ad149b5929511ce3d13b9e8083860d577946d8dec905bdaee3c1452579ba75a6bdc2413cd693dda896113fc86b2bfe6e989260e7d02feaf76b07",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 7,
+      "ts": 1794765838.8836262,
+      "kind": "contract.sealed",
+      "detail": {
+        "contract_id": "ctr-0006",
+        "vendor": "settler",
+        "stake": 50
+      },
+      "prev": "961fa99c4db9363a0ed7ebb4b8eb25bf70e91c5a2dd7681fcca1df536301400c",
+      "hash": "5fbf091f158f8d9a3885b5cbc29a25a5ecbb760d174e71893620cfe61ef22931",
+      "sig": "6180a13c6f18866c407b2b5509a29a1de9ccea2db94784b82bc39a19144d89613866dd92cd4d68746cdd79fe67aebf83ead34718c47db30776ee612dcc30660a",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 8,
+      "ts": 1794765838.8847861,
+      "kind": "contract.sealed",
+      "detail": {
+        "contract_id": "ctr-0007",
+        "vendor": "settler-b",
+        "stake": 50
+      },
+      "prev": "5fbf091f158f8d9a3885b5cbc29a25a5ecbb760d174e71893620cfe61ef22931",
+      "hash": "d946fdfec88bc02efb4b4bf72a1ebffed64994d7e6458077562152aa532dd5a0",
+      "sig": "63fe090dc43855c974fabdb793ce51e06cd3a915dd7ede367f05877a5d3c6b29588493668af46df0a2d3bff78fbcdb7a440e33c235cc25d5cc6106049dea0d04",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 9,
+      "ts": 1794765838.897252,
+      "kind": "proof.seal",
+      "detail": {
+        "verdict": "PROVEN",
+        "failed": []
+      },
+      "prev": "d946fdfec88bc02efb4b4bf72a1ebffed64994d7e6458077562152aa532dd5a0",
+      "hash": "ac7911e56f487b10e28c7fccb2d8fe1425ead1b02499aaa3422d77cb507bfc54",
+      "sig": "813377e935dc7269bcb0c3891dafa2c3bb932315db70571a5c191106da7ed80cdb31561fff8fde5f9e39edaf6c00c8b504fedd81be464e905807fd759521ae04",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 10,
+      "ts": 1794765838.8974032,
+      "kind": "app.live",
+      "detail": {
+        "pipeline": [
+          "normalize",
+          "score",
+          "schedule",
+          "settle"
+        ]
+      },
+      "prev": "ac7911e56f487b10e28c7fccb2d8fe1425ead1b02499aaa3422d77cb507bfc54",
+      "hash": "cbad240957f4e750b4bf8cd092ee95a4a27b86d1e81f9174c9a81a77c2781616",
+      "sig": "5930986a207ca5dd3f49b85bdfbbcd536e541f306168234752f9274bceaf8004d27d8f78393dfd5c89fb3b375426d77235e8e7287bc2c1171699a71747244c07",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 11,
+      "ts": 1794765838.9360423,
+      "kind": "slash",
+      "detail": {
+        "vendor": "scheduler-a",
+        "forfeit": 50,
+        "reason": "output schema silently widened: $.priority: undeclared field",
+        "evidence": "7bb808de153367cc"
+      },
+      "prev": "cbad240957f4e750b4bf8cd092ee95a4a27b86d1e81f9174c9a81a77c2781616",
+      "hash": "3c9d2c6cdee78c5c13c7a09a1d536b88e414eac446ee8809c69347d34473098e",
+      "sig": "24b09f8627f3f030cb55e72fe4eaca1fb6bdbf16eafc981c14c97bb84ed7512baf7054a1aa2cc08fd52d8036b6a670eaee922c7e82ce5e237b296c20bd45ba05",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 12,
+      "ts": 1794765838.9365785,
+      "kind": "edge.rerouted",
+      "detail": {
+        "stage": "schedule",
+        "to": "scheduler-b"
+      },
+      "prev": "3c9d2c6cdee78c5c13c7a09a1d536b88e414eac446ee8809c69347d34473098e",
+      "hash": "e9eff56bedf4343e44a0c79f2f35692b502ac2bb1385acbe8008d6a9942b8cf3",
+      "sig": "ea613b4b264781f6b57de17662378ea1edb705604180b59f490f0ffa31a164cabe1049f93b0c1b12e6a597a7d3e6422c33aff7145ed6aece3f645db30cba6e02",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 13,
+      "ts": 1794765838.9420877,
+      "kind": "contract.sealed",
+      "detail": {
+        "contract_id": "ctr-0008",
+        "vendor": "scorer-a",
+        "stake": 25
+      },
+      "prev": "e9eff56bedf4343e44a0c79f2f35692b502ac2bb1385acbe8008d6a9942b8cf3",
+      "hash": "cd8c414370697935f2cf1f9d1b5c6445fc493f887040b233c8d9379b95d119e8",
+      "sig": "5779560ab0e283d56061c26289ed819bb12db0a95b23d8fef133bf717f35b9ced958daa34c975e76e9344ef734d261928574dc086cba515c5b73323b087b0e0c",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 14,
+      "ts": 1794765838.942201,
+      "kind": "contract.renegotiated",
+      "detail": {
+        "vendor": "scorer-a",
+        "price": 4.0
+      },
+      "prev": "cd8c414370697935f2cf1f9d1b5c6445fc493f887040b233c8d9379b95d119e8",
+      "hash": "694839367b1ebc88077d00518e5fd7588a41da995bec7b48c407ad964862acfb",
+      "sig": "e905ba963c87b92c943ea37874c24bf039009ee78f8d413a8ae7db67954655cc60df0d44cc0b63522bae44d16184a8f6e96d846cfc534cf088d53b7416bdf406",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 15,
+      "ts": 1794765838.9792178,
+      "kind": "slash",
+      "detail": {
+        "vendor": "settler",
+        "forfeit": 50,
+        "reason": "same request, different answer: the vendor is nondeterministic on the money path (replay diverges from the original emit)",
+        "evidence": "349989c4d3234842"
+      },
+      "prev": "694839367b1ebc88077d00518e5fd7588a41da995bec7b48c407ad964862acfb",
+      "hash": "d51bd5c58820de1695d206ca3898baa3dd298cd264a639e9d089d951f5b4845c",
+      "sig": "7ff47645d8dd23444a1f74307a2e891751539a7107554e00d8fea06f100dbe45d35d51fa455734a8901253af8020db2750b08f6ca60866a9a8c0bf8788c0ac09",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 16,
+      "ts": 1794765838.9797766,
+      "kind": "edge.rerouted",
+      "detail": {
+        "stage": "settle",
+        "to": "settler-b",
+        "reason": "equivocation"
+      },
+      "prev": "d51bd5c58820de1695d206ca3898baa3dd298cd264a639e9d089d951f5b4845c",
+      "hash": "ec0ee0f2f3ad6c48d61405ac6b1ba47d9417f1d7114dbab06648327e0eec19f8",
+      "sig": "e5c8be54119d327af74cc72fb61269ff14baf38dee91671ceaf1bd90f42d82b0f12a5ede088a14c193e30dddf36820b76b7a6c98a03cdda126bcc1b74d4ae900",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 17,
+      "ts": 1794765839.0323613,
+      "kind": "swap.rollback",
+      "detail": {
+        "vendor": "scorer-a"
+      },
+      "prev": "ec0ee0f2f3ad6c48d61405ac6b1ba47d9417f1d7114dbab06648327e0eec19f8",
+      "hash": "46d7881823092d8a0f7dd38b7412ca958136074b0592438f4b4a278b9cbaa312",
+      "sig": "a33393fce1d199675a497e2beb6f790967de83ad5fe25682747c4a39a0e20ff5f9e07c872dacca40b33085d4126583eaa3281c0d56ca18be5cda9fd1fb6b350b",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 18,
+      "ts": 1794765839.0326655,
+      "kind": "slash",
+      "detail": {
+        "vendor": "scorer-a",
+        "forfeit": 25,
+        "reason": "breaking bump without compatibility window",
+        "evidence": "a50ac57be07af1c827351692496bb9acd5c832afa3bd9120b44f66b94ac723d1"
+      },
+      "prev": "46d7881823092d8a0f7dd38b7412ca958136074b0592438f4b4a278b9cbaa312",
+      "hash": "e8ee7bd1c6ef2e86f9419b3fc1d2631e89f04c2560e0ec7c975ad6b7324f318c",
+      "sig": "0e6144ece6a4662742e96bffebda32a431a290de3f6847e0d411887d9bb9b6fd1f5ed683ed9044928fb46e88f8bece72589a1361e5fa1a93f92ef534279d0f09",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 19,
+      "ts": 1794765839.1123211,
+      "kind": "contract.sealed",
+      "detail": {
+        "contract_id": "ctr-0009",
+        "vendor": "scorer-c",
+        "stake": 25
+      },
+      "prev": "e8ee7bd1c6ef2e86f9419b3fc1d2631e89f04c2560e0ec7c975ad6b7324f318c",
+      "hash": "38d621f2730f9091d9d5f2801053a22718039bc73478b019338130019d800f74",
+      "sig": "7537b5e2e747d1c26bd38b0b8d8fab3b272ac986d00297c012760b4930c68c36a988ade797083ff57f63e50e7a49e648cc270f583aa9d1658e295096354e4a0b",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 20,
+      "ts": 1794765839.1402721,
+      "kind": "slash",
+      "detail": {
+        "vendor": "scorer-c",
+        "forfeit": 25,
+        "reason": "live emit off the vendor's own probed calibration (expected 0.9999, observed 0.09999): behavior keyed on input context, honest only under probes",
+        "evidence": "6baf3334e584e9ca"
+      },
+      "prev": "38d621f2730f9091d9d5f2801053a22718039bc73478b019338130019d800f74",
+      "hash": "4b83bb68f6e21fab9c25f2dfa89896eb6bc80cd2e7ed1dcb87a73f3b9a8519c6",
+      "sig": "712c09e1fa8ca55b8b36da4ca568b80ac40182a1b519fb1d36811ba0ef71d2990b925b53a83d7314dd8472814a11fd907efc1f47a0636f4342b18a891730790f",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 21,
+      "ts": 1794765839.140805,
+      "kind": "edge.rerouted",
+      "detail": {
+        "stage": "score",
+        "to": "scorer-a",
+        "reason": "expelled vendor replaced"
+      },
+      "prev": "4b83bb68f6e21fab9c25f2dfa89896eb6bc80cd2e7ed1dcb87a73f3b9a8519c6",
+      "hash": "bbce851cbb96093e897ece98333e378c6789b994ff1b32a7874e35fe7ab5b1c5",
+      "sig": "8c6e29df39f5fe558467bb1a2cccbb648fcac32155ca21916813f80e6a375ce4b2620cbb520f6fbcc3595b51ec11bbff5c64d76045d5f4cdd69c3a417b4e9707",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 22,
+      "ts": 1794765839.1419425,
+      "kind": "expulsion",
+      "detail": {
+        "vendor": "scorer-c",
+        "reason": "behavior keyed on input context: honest under probe-era timestamps, fraudulent on live traffic",
+        "evidence": "f80a5f52f9f24fb2"
+      },
+      "prev": "bbce851cbb96093e897ece98333e378c6789b994ff1b32a7874e35fe7ab5b1c5",
+      "hash": "dff917f23fff5527b724def5f0538a38130f5201b4623bf5b78c29c34403282e",
+      "sig": "2ba735b12b4038a2f5b1bcad911192fe013c3190d15407204f58ab51be6e785d2172763f620b4075d7c035927bc2ea7b63a8e3f2d3ae290268baf74128482102",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 23,
+      "ts": 1794765839.2632906,
+      "kind": "product.contract",
+      "detail": {
+        "contract_id": "ctr-0010",
+        "price": 12.0,
+        "bond": 50.0
+      },
+      "prev": "dff917f23fff5527b724def5f0538a38130f5201b4623bf5b78c29c34403282e",
+      "hash": "a5f65af6ad0c5d537c80d4110518f0474e74b0189e7c9b8258d926898cc0ae63",
+      "sig": "b4459c58c0b577e1627e309e14175c8e8185a396448ff915bee8bf697a57492979411ed539a4fb320cee022855d35afd836c2733a241f66e4f3eda160eeb7b0b",
+      "signer": "node:forge@d5ad729b157049db"
+    },
+    {
+      "n": 24,
+      "ts": 1794765839.3445141,
+      "kind": "app.final",
+      "detail": {
+        "accounting": {
+          "inputs": 111,
+          "transfers": 111,
+          "settled": 97,
+          "held": 14,
+          "rejected": 0,
+          "deadletter": 0
+        }
+      },
+      "prev": "a5f65af6ad0c5d537c80d4110518f0474e74b0189e7c9b8258d926898cc0ae63",
+      "hash": "2f35e0b1fad62bdbfdee2ab29d5f2fb02f3d8d3b7de5900a9f68d58649a51923",
+      "sig": "81a30fe78b41824d1074e5f17691bc4be1d6722f098ca5796e66af0e0908c59c6dba06d4d34e12e58503b431c9cc8a763ca96807c7e219930aecd02f54175c07",
+      "signer": "node:forge@d5ad729b157049db"
+    }
+  ],
+  "hash": "90b0f2bc7d196e0074998a15c31017d9ffeca42af9c4e092dd7734730ad6bec2",
+  "sig": "1c7785f68d73d8f964831274fa3ab91d5bb642de22a3256f4206c3d708a3235b3929b7777b9a7ef87758ee3ce645a79c644032aa2f1294693ad29552ed7b6409"
+}

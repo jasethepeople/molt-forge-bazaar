@@ -1,0 +1,469 @@
+{
+  "vendor": "normalizer-b",
+  "capability": "data-normalizer",
+  "probes": [
+    {
+      "probe": "happy-0",
+      "payload_sha": "bda4802fbdb8be54",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-cf5b1afb4c67",
+          "kind": "claim",
+          "amount": 250.0,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 31,
+      "latency_ms": 13.32,
+      "contract_violations": []
+    },
+    {
+      "probe": "happy-1",
+      "payload_sha": "2444b8ccd49e1cc4",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-a149c92026ff",
+          "kind": "dispute",
+          "amount": 900.5,
+          "ts": 1700000100,
+          "norm": "v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 9.55,
+      "contract_violations": []
+    },
+    {
+      "probe": "happy-2",
+      "payload_sha": "8790a5820629fbcb",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-48ded99ae5ba",
+          "kind": "refund",
+          "amount": 10.0,
+          "ts": 1700000200,
+          "norm": "v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 13.83,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-boundary-0",
+      "payload_sha": "932a66d436d116fd",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-b0806d5b813c",
+          "kind": "claim",
+          "amount": 0.0,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 27,
+      "latency_ms": 6.83,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-boundary-1",
+      "payload_sha": "4d38a2c43e978efe",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-8860eebf40a1",
+          "kind": "claim",
+          "amount": 0.01,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 13.35,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-boundary-2",
+      "payload_sha": "bdc4b44ae4878f4f",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-7658c4e264b2",
+          "kind": "claim",
+          "amount": 999999.99,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 8.92,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-boundary-3",
+      "payload_sha": "02d60ae62c43932f",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-3c37308cda98",
+          "kind": "claim",
+          "amount": 1000000.0,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 6.16,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-boundary-4",
+      "payload_sha": "0818b4cfc832b1f4",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-8b37b58d3813",
+          "kind": "claim",
+          "amount": 1000000.01,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 8.81,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-boundary-5",
+      "payload_sha": "b88101c6689b7834",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-c4029272d786",
+          "kind": "claim",
+          "amount": 1000000000.0,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 10.94,
+      "contract_violations": []
+    },
+    {
+      "probe": "amount-boundary-6",
+      "payload_sha": "8807d495a81c8cda",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "amount above canonical range"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 10.89,
+      "contract_violations": []
+    },
+    {
+      "probe": "kind-sweep-0",
+      "payload_sha": "2977c5568d7c4b95",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-5840c73552bf",
+          "kind": "claim",
+          "amount": 100.0,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 27,
+      "latency_ms": 12.49,
+      "contract_violations": []
+    },
+    {
+      "probe": "kind-sweep-1",
+      "payload_sha": "9c209d070fbac59d",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-f3cc3550acc7",
+          "kind": "dispute",
+          "amount": 100.0,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 8.59,
+      "contract_violations": []
+    },
+    {
+      "probe": "kind-sweep-2",
+      "payload_sha": "589e19511382fc88",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-73e3fc2f541e",
+          "kind": "refund",
+          "amount": 100.0,
+          "ts": 1700000000,
+          "norm": "v1"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 10.81,
+      "contract_violations": []
+    },
+    {
+      "probe": "kind-sweep-3",
+      "payload_sha": "73ffda492397d1d6",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "unknown kind 'adjustment'"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 13.01,
+      "contract_violations": []
+    },
+    {
+      "probe": "kind-sweep-4",
+      "payload_sha": "293be0db39c7dafc",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "unknown kind 'chargeback'"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 8.88,
+      "contract_violations": []
+    },
+    {
+      "probe": "kind-sweep-5",
+      "payload_sha": "38b0bb87a858e846",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "unknown kind 'claim '"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 13.66,
+      "contract_violations": []
+    },
+    {
+      "probe": "kind-sweep-6",
+      "payload_sha": "8e7c797ef788dcab",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "unknown kind 'CLAIM'"
+        }
+      },
+      "gas": 27,
+      "latency_ms": 10.28,
+      "contract_violations": []
+    },
+    {
+      "probe": "kind-sweep-7",
+      "payload_sha": "e858629fb64739bf",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "unknown kind ' withdrawal'"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 10.67,
+      "contract_violations": []
+    },
+    {
+      "probe": "type-confusion-0",
+      "payload_sha": "859c6191145b861e",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "field type violation"
+        }
+      },
+      "gas": 26,
+      "latency_ms": 10.65,
+      "contract_violations": []
+    },
+    {
+      "probe": "type-confusion-1",
+      "payload_sha": "fb8ea35b184600ca",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "field type violation"
+        }
+      },
+      "gas": 26,
+      "latency_ms": 10.07,
+      "contract_violations": []
+    },
+    {
+      "probe": "type-confusion-2",
+      "payload_sha": "a96733ab01357786",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "field type violation"
+        }
+      },
+      "gas": 27,
+      "latency_ms": 9.58,
+      "contract_violations": []
+    },
+    {
+      "probe": "type-confusion-3",
+      "payload_sha": "df4da335f9dc0619",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "field type violation"
+        }
+      },
+      "gas": 25,
+      "latency_ms": 8.61,
+      "contract_violations": []
+    },
+    {
+      "probe": "type-confusion-4",
+      "payload_sha": "22394d48dc73fefc",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "unknown kind ''"
+        }
+      },
+      "gas": 25,
+      "latency_ms": 7.31,
+      "contract_violations": []
+    },
+    {
+      "probe": "type-confusion-5",
+      "payload_sha": "a684dfb2e0907b96",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-94ea19fceecc",
+          "kind": "claim",
+          "amount": 5.0,
+          "ts": 1,
+          "norm": "v1"
+        }
+      },
+      "gas": 65,
+      "latency_ms": 9.48,
+      "contract_violations": []
+    },
+    {
+      "probe": "type-confusion-6",
+      "payload_sha": "a891b4a52f97b096",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "invalid_input",
+          "detail": "amount below declared domain"
+        }
+      },
+      "gas": 26,
+      "latency_ms": 10.84,
+      "contract_violations": []
+    },
+    {
+      "probe": "type-confusion-7",
+      "payload_sha": "c74ad2486b639081",
+      "emit": {
+        "ok": true,
+        "data": {
+          "event_id": "ev-94ea19fceecc",
+          "kind": "claim",
+          "amount": 5.0,
+          "ts": 1,
+          "norm": "v1"
+        }
+      },
+      "gas": 26,
+      "latency_ms": 10.82,
+      "contract_violations": []
+    }
+  ],
+  "observed_schema": {
+    "type": "object",
+    "properties": {
+      "amount": {
+        "type": "number",
+        "min": 0.0,
+        "max": 1000000000.0
+      },
+      "event_id": {
+        "type": "string",
+        "minLength": 15,
+        "maxLength": 15
+      },
+      "kind": {
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 7,
+        "enum": [
+          "claim",
+          "dispute",
+          "refund"
+        ]
+      },
+      "norm": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "enum": [
+          "v1"
+        ]
+      },
+      "ts": {
+        "type": "integer",
+        "min": 1,
+        "max": 1700000200,
+        "enum": [
+          1,
+          1700000000,
+          1700000100,
+          1700000200
+        ]
+      }
+    },
+    "required": [
+      "amount",
+      "event_id",
+      "kind",
+      "norm",
+      "ts"
+    ],
+    "additionalProperties": false
+  },
+  "direct_violations": [],
+  "violation_records": [],
+  "schema_mismatch": [],
+  "verdict": "consistent",
+  "transcript_sha": "be1c8bc59327ddb6"
+}

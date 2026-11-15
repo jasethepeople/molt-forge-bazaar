@@ -1,0 +1,202 @@
+{
+  "vendor": "scheduler-a",
+  "capability": "scheduler",
+  "probes": [
+    {
+      "probe": "stream-0",
+      "payload_sha": "521ebe01fd9fada9",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "accepted_no_emit",
+          "detail": "batching"
+        }
+      },
+      "gas": 32,
+      "latency_ms": 9.66,
+      "contract_violations": []
+    },
+    {
+      "probe": "stream-1",
+      "payload_sha": "ae3e29a0dea16a26",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "accepted_no_emit",
+          "detail": "batching"
+        }
+      },
+      "gas": 32,
+      "latency_ms": 13.29,
+      "contract_violations": []
+    },
+    {
+      "probe": "stream-2",
+      "payload_sha": "8f0c43d83fa4f2d3",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "accepted_no_emit",
+          "detail": "batching"
+        }
+      },
+      "gas": 32,
+      "latency_ms": 12.93,
+      "contract_violations": []
+    },
+    {
+      "probe": "stream-3",
+      "payload_sha": "4780a24808d1c7da",
+      "emit": {
+        "ok": true,
+        "data": {
+          "trigger_id": "tg-000000000001",
+          "batch_no": 1,
+          "at": 1700000063,
+          "kind": "settle"
+        }
+      },
+      "gas": 32,
+      "latency_ms": 7.06,
+      "contract_violations": []
+    },
+    {
+      "probe": "stream-4",
+      "payload_sha": "a2af59413be01612",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "accepted_no_emit",
+          "detail": "batching"
+        }
+      },
+      "gas": 32,
+      "latency_ms": 7.4,
+      "contract_violations": []
+    },
+    {
+      "probe": "stream-5",
+      "payload_sha": "9e84aef4579d7d32",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "accepted_no_emit",
+          "detail": "batching"
+        }
+      },
+      "gas": 32,
+      "latency_ms": 10.15,
+      "contract_violations": []
+    },
+    {
+      "probe": "risk-edge-0",
+      "payload_sha": "21a7831563d245f5",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "accepted_no_emit",
+          "detail": "batching"
+        }
+      },
+      "gas": 28,
+      "latency_ms": 7.87,
+      "contract_violations": []
+    },
+    {
+      "probe": "risk-edge-1",
+      "payload_sha": "686c1b38ed58be19",
+      "emit": {
+        "ok": true,
+        "data": {
+          "trigger_id": "tg-000000000002",
+          "batch_no": 2,
+          "at": 65,
+          "kind": "settle"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 12.22,
+      "contract_violations": []
+    },
+    {
+      "probe": "risk-out-of-range",
+      "payload_sha": "98bca89aad41ea20",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "accepted_no_emit",
+          "detail": "batching"
+        }
+      },
+      "gas": 29,
+      "latency_ms": 11.47,
+      "contract_violations": []
+    },
+    {
+      "probe": "missing-risk",
+      "payload_sha": "addce1203e9b1434",
+      "emit": {
+        "ok": false,
+        "error": {
+          "code": "accepted_no_emit",
+          "detail": "batching"
+        }
+      },
+      "gas": 27,
+      "latency_ms": 13.18,
+      "contract_violations": []
+    }
+  ],
+  "observed_schema": {
+    "type": "object",
+    "properties": {
+      "at": {
+        "type": "integer",
+        "min": 65,
+        "max": 1700000063,
+        "enum": [
+          65,
+          1700000063
+        ]
+      },
+      "batch_no": {
+        "type": "integer",
+        "min": 1,
+        "max": 2,
+        "enum": [
+          1,
+          2
+        ]
+      },
+      "kind": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 6,
+        "enum": [
+          "settle"
+        ]
+      },
+      "trigger_id": {
+        "type": "string",
+        "minLength": 15,
+        "maxLength": 15,
+        "enum": [
+          "tg-000000000001",
+          "tg-000000000002"
+        ]
+      }
+    },
+    "required": [
+      "at",
+      "batch_no",
+      "kind",
+      "trigger_id"
+    ],
+    "additionalProperties": false
+  },
+  "direct_violations": [],
+  "violation_records": [],
+  "schema_mismatch": [],
+  "verdict": "consistent",
+  "transcript_sha": "93bc94ce959029a0"
+}

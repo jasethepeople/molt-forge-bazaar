@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "findings": [],
+  "claims": {
+    "liar_caught_before_pipeline": true,
+    "contracts_honored_or_slashed": true,
+    "proven_before_first_execution": true,
+    "hot_swap_preserved_integrity": true,
+    "probe_evasion_caught_live_and_expelled": true,
+    "equivocation_caught_by_replay_audit": true,
+    "forge_sold_its_own_proven_composition": true,
+    "chain_integrity": true,
+    "anchor_integrity": true
+  },
+  "stats": {
+    "events": 1634,
+    "disqualifications": 1,
+    "expulsions": 1,
+    "contracts": 10,
+    "replay_audits": 40,
+    "calibration_canaries": 3,
+    "product_events_served": 12,
+    "slashes": 4,
+    "treasury": 150,
+    "spent": 1179.0
+  }
+}

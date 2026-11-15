@@ -1,0 +1,22 @@
+[
+  {
+    "amount": 1000.0,
+    "kind": "claim",
+    "risk": 1e-06
+  },
+  {
+    "amount": 50000.0,
+    "kind": "claim",
+    "risk": 4e-05
+  },
+  {
+    "amount": 5000000.0,
+    "kind": "claim",
+    "risk": 0.004
+  },
+  {
+    "amount": 500000000.0,
+    "kind": "claim",
+    "risk": 0.4
+  }
+]
